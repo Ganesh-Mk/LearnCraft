@@ -59,14 +59,16 @@ function CodingPage() {
   const userObj = useSelector((state) => state.user);
   const [value, setValue] = useState(problemObj.javascriptDefaultCode);
   const [loadSolvedTickMark, setLoadSolvedTickMark] = useState(false);
-
   useEffect(() => {
     axios
       .get(`${VITE_BACKEND_URL}/problemRecord`, {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {
-        const solvedProblems = response.data.allProblems.reduce((acc, item) => {
+        const allProblems = Array.isArray(response.data.allProblems)
+          ? response.data.allProblems
+          : [];
+        const solvedProblems = allProblems.reduce((acc, item) => {
           acc[item.number] = item.attempts > 0;
           return acc;
         }, {});

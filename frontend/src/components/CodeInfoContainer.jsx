@@ -38,7 +38,10 @@ function CodeInfoContainer({ isLoadingSubmit }) {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {
-        const solvedProblems = response.data.allProblems.reduce((acc, item) => {
+        const allProblems = Array.isArray(response.data.allProblems)
+          ? response.data.allProblems
+          : [];
+        const solvedProblems = allProblems.reduce((acc, item) => {
           acc[item.number] = item.attempts > 0;
           return acc;
         }, {});

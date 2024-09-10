@@ -88,24 +88,29 @@ function ProblemsPage() {
   };
 
   const problemsToShow = filterByDifficulty(selectedValue);
-
   useEffect(() => {
     axios
       .get(`${VITE_BACKEND_URL}/problemRecord`, {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {
-        const solvedProblems = response.data.allProblems.reduce((acc, item) => {
+        const allProblems = Array.isArray(response.data.allProblems)
+          ? response.data.allProblems
+          : [];
+        const solvedProblems = allProblems.reduce((acc, item) => {
           acc[item.number] = item.attempts > 0;
           return acc;
         }, {});
-        console.log("solved setting from problem Page: ", solvedProblems);
+        console.log(
+          "solved setting from problemDisplayContainer: ",
+          solvedProblems
+        );
         localStorage.setItem("solved", JSON.stringify(solvedProblems));
       })
       .catch((error) => {
         console.error("Error fetching user data:", error);
       });
-  }, []);
+  }, [loadSolvedTickMark]);
 
   return (
     <div style={{ backgroundColor: "#1a1a1a", height: "100vh" }}>

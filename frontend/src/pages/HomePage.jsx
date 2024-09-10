@@ -136,7 +136,10 @@ const HomePage = () => {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {
-        const solvedProblems = response.data.allProblems.reduce((acc, item) => {
+        const allProblems = Array.isArray(response.data.allProblems)
+          ? response.data.allProblems
+          : [];
+        const solvedProblems = allProblems.reduce((acc, item) => {
           acc[item.number] = item.attempts > 0;
           return acc;
         }, {});
@@ -149,7 +152,7 @@ const HomePage = () => {
       .catch((error) => {
         console.error("Error fetching user data:", error);
       });
-  }, []);
+  }, [loadSolvedTickMark]);
 
   useEffect(() => {}, [attempts]);
 
