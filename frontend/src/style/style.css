@@ -1,0 +1,170 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+.css-1qw5wox {
+  border: .06rem solid #4299e16d !important;
+  border-radius: .5rem !important;
+}
+
+:root[data-theme=dark], [data-theme][data-theme=dark] {
+  --chakra-colors-chakra-body-bg: #1A1A1A !important;
+}
+
+.text-xl{
+  text-align: center !important;
+}
+
+.entranceBtnBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+.codeText{
+  color: white;
+  transition: .2s ease-in-out;
+}
+.codeText:hover{
+  color: rgba(0, 131, 231, 0.89);
+}
+
+.icons {
+  width: 2vw;
+  height: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+    .copyRightText{
+      font-size: 3vw !important;
+      margin-left: auto !important;
+    }
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+p,span{
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: .08rem !important;
+
+}
+
+.balsamiq-sans-regular {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.balsamiq-sans-bold {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.balsamiq-sans-regular-italic {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.balsamiq-sans-bold-italic {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.entrancePage {
+  overflow-y: scroll;
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+*::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.217
+  ); /* Light color for the scrollbar thumb */
+  border-radius: 10px; /* Full border radius for rounded corners */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin; /* Firefox equivalent for thin scrollbar */
+  scrollbar-color: rgba(255, 255, 255, 0.413) transparent; /* Color for thumb and track */
+}
+
+/* Edge and Internet Explorer */
+* {
+  -ms-overflow-style: none; /* Hides default scrollbar */
+}
+
+.css-clwkh4 {
+  transition-duration: 1s !important;
+}
+
+
+*::-ms-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+*::-ms-thumb {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.144
+  ); /* Color for the scrollbar thumb */
+  border-radius: 10px; /* Full border radius */
+}
+
+.monaco-editor .view-line span {
+  font-size: 98% !important; /* Adjust the font size as needed */
+  letter-spacing: .04vw !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+@media screen and (max-width: 800px) {
+  .icons {
+    width: 5vw;
+    height: 5vw;
+  }
+  .navRemoveOnMini{
+    display: none !important;
+  }
+  
+.entranceBtnBox{
+  flex-direction: column;
+}
+}

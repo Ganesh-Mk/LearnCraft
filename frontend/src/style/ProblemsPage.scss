@@ -1,0 +1,335 @@
+$darkMode: #1a1a1a;
+
+.css-1kfu8nn {
+  max-height: 50vh !important;
+  overflow-y: scroll !important;
+}
+.whole-conatiner {
+  min-height: 104vh;
+  width: 100vw;
+  background-color: $darkMode;
+
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  // margin-top: .5vw;
+  font-size: 1.8vw;
+  background-color: $darkMode;
+  color: white;
+  > p {
+    margin-top: 1vw;
+    font-size: 2vw;
+  }
+}
+.problemShowerContainer{
+  // height: auto;
+  background-color: #1a1a1a;
+  // padding: 1vw .8vw;
+}
+.problemsShower {
+  // border: 2px solid rgb(0, 255, 0);
+  padding: 0vw .8vw;
+  border-radius: 1vw;
+  height: auto;
+  margin: 0vw 1vw;
+  background-color: #282828;
+
+  .levelss {
+    // border: 2px solid red;
+    background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 2vw;
+    .levelspart {
+    margin-top: 2vw;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5vw;
+      p{
+        color: #ffffff;
+      }
+    }
+    .ds {
+      margin-right: 1vw;
+    }
+  }
+}
+.filterdropdownShow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+ 
+  > p {
+    font-size: 1.2vw;
+    // margin-top: 1vw;
+  }
+
+  > select {
+    color: rgb(234, 234, 234);
+    border-radius: 0.5vw;
+    min-width: 7vw;
+    border: 2px solid white;
+    height: 2vw;
+    font-size: 1vw;
+    background-color: $darkMode;
+  }
+}
+.dropDownShow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+ 
+  // border: 2px solid red;
+  > p {
+    font-size: 1.2vw;
+    // margin-top: 1vw;
+  }
+  > select {
+    color: rgb(234, 234, 234);
+    border-radius: 0.5vw;
+    width: 6vw;
+    border: 2px solid white;
+    height: 2vw;
+    font-size: 1vw;
+    background-color: $darkMode;
+  }
+}
+
+.submitbutton {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: 2px solid red;
+  margin-top: 0;
+  width: 2vw;
+  img {
+    width: 1.4vw;
+
+    cursor: pointer;
+    margin-top: 0;
+    filter: invert(1);
+  }
+}
+
+.SearchBarPart {
+  // border: 2px solid red;
+  background-color: #282828;
+  width: auto;
+  border-radius: 1vw;
+  color: white;
+  padding: 1vw 2vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw 1vw;
+  align-items: center;
+
+  .searchBarRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+  }
+
+  .SearchBarShow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    form {
+      display: flex;
+
+      input {
+        flex: 1;
+        width: 25vw;
+        height: 2vw;
+        font-size: 1.3vw;
+        padding: 0.2vw 0.6vw;
+        border: none;
+        box-shadow: 1px 4px 16px rgba(114, 113, 113, 0.539);
+        border-radius: 0.5vw;
+        // border: 2px solid rgb(255, 217, 0);
+      }
+    }
+  }
+}
+
+::placeholder {
+  font-size: 1vw;
+  padding: 0.2vw 0.6vw;
+}
+
+.searchbarpart3 {
+  margin-top: 1.5vw;
+  img {
+    width: 1.8vw;
+  }
+  button {
+    cursor: pointer;
+    background-color: greenyellow;
+    padding: 0.2vw 0.7vw;
+    border-radius: 0.4vw;
+    color: black;
+    font-size: 0.8vw;
+    font-weight: 600;
+    display: flex;
+    border: none;
+    gap: 0.3vw;
+  }
+  .searchbarpart3btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+
+.horizontallinediv {
+  background-color: #1a1a1a;
+}
+
+
+.problemShower {
+  //    margin-top: 2vw;
+  //    border: 2px solid red;
+  //    margin: 1vw 1vw 0vw 1vw;
+  background-color: #282828;
+
+  height: 63vh;
+  overflow-y: scroll;
+  padding: 0vw 1vw 7vw 1vw;
+
+  // background-color: $darkMode;
+
+  h2 {
+    color: white;
+    position: relative;
+    right: -45vw;
+    top: 20vh;
+  }
+}
+.problemShower::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+}
+
+.problemShower::-webkit-scrollbar-track {
+  background: $darkMode; /* color of the track */
+}
+
+.problemShower::-webkit-scrollbar-thumb {
+  background: #adff2f; /* color of the thumb */
+  border-radius: 5px; /* roundness of the thumb */
+}
+
+.problemShower::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the thumb on hover */
+}
+
+.topics{
+  display: none;
+}
+
+.topicsDisplayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+.problemTopics{
+  color: lightgrey;
+}
+@media screen and (max-width: 800px) {
+  .SearchBarPart{
+    flex-direction: column;
+    padding: 4vw 0;
+    gap: 5vw;
+  }
+  .css-53y4br {
+    width: 85vw !important;
+  }
+  .css-xl71ch,
+  .css-usrv7s,
+  .chakra-button__icon{
+    font-size: 3.5vw !important;
+  }
+  .SearchBarPart .searchBarRight {
+    padding: 0 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+.problemBoxContainer .problemBoxPart1 p{
+  font-size: 4.5vw;
+}
+.problemBoxContainer .problemBoxPart1{
+  
+  align-items: baseline;
+}
+.notSolved, 
+.solvedIcons{
+  margin: 5vw 0;
+}
+.problemsShower .levelss .levelspart p{
+  font-size: 3vw;
+  color: lightgrey;
+}
+.problemBoxContainer .problemBoxMiddle {
+  margin-right: auto;
+  margin-left: 10vw;
+}
+.problemsShower p{
+  font-size: 4vw;
+}
+.difficultyDisplayer p,
+.attempts p,
+.topicsDisplayer span{
+  font-size: 3.5vw;
+}
+.problemBoxContainer{
+  flex-direction: column;
+  margin-top: 3.5vw;
+}
+.problemsShower .levelss .levelspart .problemName{
+  font-size: 4vw;
+}
+.css-18esm8n{
+  height: 10vw !important;
+}
+.problemsShower .levelss{
+  margin: 6vw 0;
+}
+.problemBoxPart2{
+  padding-right: 3vw;
+}
+.topics{
+  display: block;
+  color: lightgray;
+}
+.ds{
+  display: none;
+}
+.problemTopics{
+  color: grey;
+}
+.problemBoxContainer .problemBoxPart2 .difficultyDisplayer {
+  margin-right: 5vw;
+}
+.statusContainer{
+  width: 6vw;
+  height: 6vw;
+  flex: 0 0 auto;
+}
+.problemShower {
+  padding: 0vw 1vw 20vw 1vw;
+}
+.heading p{
+  font-size: 5vw;
+}
+}

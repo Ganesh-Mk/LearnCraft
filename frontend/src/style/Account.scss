@@ -1,0 +1,528 @@
+h1, p{
+    color: white;
+}
+
+.css-clwkh4 {
+    stroke-linecap: round !important;
+}
+
+.subListLoader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accLeftTopText{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.circleValueSmall{
+color: grey;
+ width: 1vw;
+}
+.accountPage{
+    width: 100vw;
+    padding: 1vw;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5vw;
+    background: #1A1A1A;
+
+    .accLeft{
+        border-radius: 2vw;
+        background: #282828;
+        height: 100%;
+
+        .accLeftTop{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2vw;
+            padding: 2vw;
+
+            #accEmail{
+                color: grey;
+                font-size: 1.3vw;
+            }
+            #accRank{
+                text-align: start;
+                margin-top: 2vw;
+            }
+            #accRank span{
+                color: grey;
+            }
+
+            img{
+                width: 11vw;
+                height: 11vw;
+                border-radius: 2vw;
+            }
+
+            p{
+                font-size: 1.7vw;
+            }
+        }
+
+        #accLeftBtn{
+            width: 30vw;
+            margin-top: 1vw;
+            font-size: 1.5vw;
+            height: 3vw;
+        }
+        .accBtnBox{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .socialBox{
+            width: 100%;
+            padding: 1vw 2vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+
+            .links {
+                display: inline-block; 
+              }
+              
+              .links img {
+                width: 3vw;
+                height: 3vw;
+                transition: all 0.2s ease-in-out;
+              }
+              
+              .links p {
+                font-size: 1vw;
+                color: lightgray;
+                text-align: center;
+                transition: all 0.2s ease-in-out;
+                opacity: 0;
+              }
+              
+              .links:hover img {
+                transform: scale(0.9);
+              }
+              
+              .links:hover p {
+                opacity: 1;
+              }
+              
+
+            div{
+                width: 100%;
+                padding-top: 2vw;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+        
+        }
+
+        .langBox{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+             
+            p{
+                margin: 1vw 0;
+        color: lightgrey;
+                font-size: 1.3vw;
+            }
+            h1{
+                font-size: 2vw;
+            }
+
+            .langSubBox{
+                width: 100%;
+                padding: 0 3vw;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .langLeft p{
+                    font-size: 1vw;
+                    background: #3E3E3E;
+                    margin: .6vw 0;
+                    border-radius: 100vw;
+                    padding: .3vw 4vw .2vw 4vw;
+                    text-align: center;
+
+                }
+
+                .langRight p{
+                    font-size: 1vw;
+                    margin: .6vw 0;
+                    color: grey;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1vw
+
+                }
+            }
+
+            .multipleOfLang{
+                font-size: 1.2vw;
+                color: rgb(210, 210, 210);
+            }
+        }
+        .accLogoutBox{
+            width: 100%;
+            display: flex;
+            margin-top: 1vw;
+            justify-content: center;
+            align-items: center;
+
+            Button{
+                font-size: 1.7vw;
+                height: 3vw;
+                color: rgb(247, 166, 166);
+            }
+        }
+    }
+    .accRight{
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        gap: 1.5vw;
+        
+        .accTop{
+            border-radius: 2vw;
+            display: grid;
+            background: #282828;
+            padding: 1vw;
+
+            .circleText{
+                h2{
+                    font-size: 2vw;
+                    color: white;
+                }
+                p{
+                    font-size: 1.5vw;
+                    color:rgb(219, 219, 219);
+                }
+            }
+
+            .accRightTopHeadingBox{
+                padding: 1vw 0 .5vw 6vw;
+
+                p{
+                    font-size: 1.5vw;
+                }
+
+                
+            }
+         
+
+
+            .accRightTopContentBox{
+                display: flex;
+                justify-content: center;
+                gap: 5vw;
+                align-items: center;
+
+                
+                .rangeContainer{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 2vw;
+
+                    .rangeBox{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 1.8vw;
+                        margin-top: .1vw;
+
+                       
+
+                        .range{
+                            overflow: hidden;
+                            
+                            .easyRange{
+                                height: 100%;
+                                border-radius: 10rem;
+                                background: rgb(107, 248, 109);
+                            }
+                            .mediumRange{
+                                height: 100%;
+                                border-radius: 10rem;
+                                background: rgb(255, 183, 68);
+                            }
+                            .hardRange{
+                                height: 100%;
+                                border-radius: 10rem;
+                                background: rgb(255, 82, 82);
+                            }
+                        }
+                    }
+                    .diffTextBox{
+                        display: flex;
+                        color:white;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 1.5vw;
+
+                        .easy{
+                            color: #1CBABA;
+                        }
+                        .medium{
+                            color: #FFB700;
+                        }
+                        .hard{
+                            color: #F63737;
+                        }
+
+                        p{
+                            font-size: 1.2vw;
+                        }
+                    }
+                    .numberBox{
+                        display: flex;
+                        color:white;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 1.2vw;
+
+                        p{
+                            color: white;
+                            font-size: 1.2vw;
+
+                            span{
+                                color: grey;
+                            }
+                        }
+                    }
+
+
+
+                    .range{
+                        width: 25vw;
+                        height: 1.5vw;
+                        border-radius: 10rem;
+                        box-shadow: 0px 0px 2px 0px grey;
+                    }
+                }
+
+
+            }
+
+        }
+
+        .accBottom{
+            overflow: hidden;
+            background: #282828;
+            border-radius: 2vw;
+            padding: 2vw;
+
+            > p{
+                color: grey;
+                font-size: 1.4vw;
+            }
+
+            .headings{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 2vw;
+                padding: 0 2vw;
+                
+                p{
+                    font-size: 1.5vw;
+                }
+
+                div{
+                    display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.5vw;
+                gap: 3vw;
+                margin-right: 3vw;
+                }
+            }
+
+            .subListBox{
+                height: 35vh;
+                overflow: scroll;
+                overflow-x: hidden;
+
+            }
+       
+        }
+    }
+}
+
+.css-1kd86nz {
+    width: 11vw !important;
+    height: 11vw !important;
+}
+
+.accRightTopHeadingBox{
+    padding: 0 !important;
+    padding-top: 1vw !important;
+}
+
+
+@media screen and (max-width: 800px) {
+    .css-1kd86nz {
+        width: 40vw !important;
+        height: 40vw !important;
+    }
+    .accountPage{
+        grid-template-columns: 1fr;
+        gap: 3vw;
+        overflow: scroll;
+        height: 100vh;
+    }
+    .accountPage .accLeft .accLeftTop {
+        gap: 10vw;
+        padding: 5vw 10vw;
+    }
+    .accountPage .accLeft .accLeftTop p {
+        font-size: 5vw;
+    }
+    .accountPage .accLeft .accLeftTop #accEmail {
+        font-size: 3vw;
+    }
+    .accountPage .accLeft .accLeftTop #accRank {
+        font-size: 5vw;
+    }
+    .accountPage .accLeft .accLeftTop span {
+        font-size: 3vw;
+    }
+    .accountPage .accLeft .accLeftTop img{
+        width: 30vw;
+        height: 30vw;
+    }
+    .accountPage .accLeft #accLeftBtn {
+        width: 88vw;
+        margin-top: 3vw;
+        font-size: 3.5vw;
+        height: 8vw;
+    }
+    .accountPage .accLeft .socialBox div{
+        justify-content: center;
+        margin: 4vw 0;
+        gap: 10vw;
+    }
+    .accountPage .accLeft .socialBox .links img {
+        width: 7vw;
+        height: 7vw;
+    }
+    .accountPage .accLeft .langBox {
+        padding: 0 5vw;
+    }
+    .accountPage .accLeft .langBox p {
+        font-size: 4vw;
+        margin-top: 5vw;
+    }
+    .accountPage .accLeft .langBox .langSubBox .langLeft p {
+        font-size: 4vw;
+        margin: 3vw 0;
+    }
+    .accountPage .accLeft .langBox .langSubBox .langRight p{
+        font-size: 4vw;
+        margin: 3vw 0;
+    }
+    .accountPage .accLeft .langBox .langSubBox .langRight p span{
+        font-size: 4vw;
+    }
+    .accountPage .accLeft .accLogoutBox Button {
+        margin-bottom: 5vw;
+    }
+    .accountPage .accRight .accTop .accRightTopHeadingBox p {
+        font-size: 6.5vw;
+    }
+    .accountPage .accRight .accTop .accRightTopContentBox{
+        flex-direction: column;
+        padding: 6vw 0;
+    }
+    .accountPage .accRight .accTop .circleText h2 {
+        font-size: 6vw;
+    }
+    .accountPage .accRight .accTop .circleText p {
+        font-size: 4vw;
+    }
+    .accountPage .accRight .accTop .accRightTopContentBox .rangeContainer .diffTextBox p {
+        font-size: 4vw;
+    }
+    .accountPage .accRight .accTop{
+        margin: 4vw 0;
+        border-radius: 5vw;
+    }
+    .accountPage .accRight .accBottom{
+        border-radius: 5vw;
+    }
+    .accountPage .accLeft{
+        padding-bottom: 4vw;
+        border-radius: 5vw;
+    }
+    .accountPage .accRight .accTop .accRightTopContentBox .rangeContainer .numberBox p {
+        font-size: 4vw;
+    }
+    .accountPage .accRight .accTop .accRightTopContentBox .rangeContainer .numberBox p span{
+        font-size: 4vw;
+    }
+    .accountPage .accRight .accTop .accRightTopContentBox .rangeContainer {
+        gap: 6vw;
+    }
+    .accountPage .accRight .accTop .accRightTopContentBox .rangeContainer .rangeBox {
+        margin-top: 1.5vw;
+        gap: 5vw;
+    }
+    .accountPage .accRight .accTop .accRightTopContentBox .rangeContainer .range {
+        width: 46vw;
+        height: 2.5vw;
+    }
+  
+    .accountPage .accRight .accBottom > p {
+        font-size: 5vw;
+        text-align: center;
+        margin-top: 5vw;
+    }    
+
+    .headings > div > p {
+        font-size: 2.4vw;
+    }
+
+    .accountPage .accRight {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .accountPage .accRight .accBottom .headings div {
+        margin-right: 0;
+        gap: 5vw;
+    }
+    .accountPage .accRight .accBottom .headings p {
+        font-size: 3vw;
+    }
+
+    .accountPage .accRight .accBottom .subListBox {
+       display: flex;
+       flex-direction: column;
+       gap: 2vw;
+       padding-bottom: 20vw;
+    }
+
+    .accountPage .accLeft .socialBox .links p {
+        font-size: 2vw;
+    }
+
+    .circleValueSmall{
+         width: 3vw;
+        }
+}

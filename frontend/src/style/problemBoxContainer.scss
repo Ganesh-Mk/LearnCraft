@@ -1,0 +1,95 @@
+* {
+    div {
+        color: white;
+    }
+}
+
+.numberdisplayer{
+    color:white
+}
+.solvedIcons{
+   height: 100%;
+   width: 100%;
+}
+.notSolved{
+    height: 100%;
+    width: 100%;
+    border: .1vw solid grey;
+    border-radius: 100vw;
+}
+.levelspart p,
+.problemBoxContainer p{
+    font-size: 1.3vw;
+}
+
+.problemBoxContainer {
+    background-color: #373737;
+    display: flex;
+    margin-top: 0.8vw;
+    justify-content: space-between;
+    padding: .8vw 2vw;
+    border-radius: 0.8vw;
+    gap: 2vw;
+
+
+    .problemBoxPart1 {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        .problemDisplayer {
+            font-size: 1.3vw;
+            color: white;
+            // border: 2px solid white;
+            cursor: pointer;
+            // border: 2px solid red;
+            width: auto;
+        }
+    }
+    .problemBoxMiddle {
+        // border: 2px solid red;
+        color: white;
+        // border: 2px solid white;
+        display: flex;
+        width: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .problemBoxPart2 {
+        display: flex;
+        width: auto;
+        // border: 2px solid white;
+        align-items: center;
+        gap: 5vw;
+        .difficultyDisplayer {
+            font-size: 1.3vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            // border: 2px solid blue;
+            // border: 2px solid red;
+            width: 6.5vw;
+        }
+        .attempts {
+            font-size: 1.1vw;
+            color: white;
+            width: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // border: 2px solid black;
+        }
+
+    }
+    .problemBoxPart2Margin{
+        gap: 1.5vw;
+    }
+}
+
+.statusContainer {
+    width: 2.2vw;
+    height: 2.2vw;
+    margin-right: 3vw;
+    flex: 0 0 auto;
+    border-radius: 50%;
+}

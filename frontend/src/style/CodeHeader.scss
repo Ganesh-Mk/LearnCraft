@@ -1,0 +1,22 @@
+.codeHeader{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:10%;
+    color: white;
+}
+
+.codeHeaderBtns{
+    font-size: 5vw;
+    color: red;
+}
+
+
+@media screen and (max-width: 800px) {
+    .codeHeader{
+        padding: 0 7vw 0 1.5vw;
+        gap: 2vw;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,97 @@
+* {
+    color: white;
+    font-family: sans-serif;
+}
+
+.codingPageBox {
+    overflow: hidden;
+    width: 100vw;
+    min-height: 100vh;
+    background: #242424;
+    color: white;
+
+    .codingContainer {
+        height: 90vh;
+        width: 100vw;
+        display: grid;
+        background: #1a1a1a;
+        grid-template-columns: 40% 58%;
+
+        .left {
+            padding: 20px;
+            border-right: 0;
+            width: 40vw;
+            background: none;
+
+            .leftHeader {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                border-bottom: 1px solid grey;
+                padding-bottom: 10px;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            .scroller {
+                overflow-y: auto;
+                height: 75vh; /* Adjusted for header and header margin */
+            }
+
+            .que {
+                font-size: 1.5rem;
+                color: white;
+                margin-bottom: 20px;
+
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .desc {
+                color: white;
+                line-height: 2;
+                font-size: 1.4vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .css-1as86t7 {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5vw !important;
+    }
+    .codingPageBox .codingContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100vw;
+        background: #242424;
+        color: white;
+        min-height: 95vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .codingPageBox .codingContainer .left {
+        padding: 20px;
+        border-right: 0;
+        height: auto;
+        width: 100vw;
+    }
+    .codingPageBox .codingContainer .left .scroller {
+        height: auto;
+        width: 100vw;
+    }
+    .codingPageBox .codingContainer .left .desc {
+        font-size: 4vw;
+        width: 90vw;
+    }
+    .codingPageBox .codingContainer .left .que {
+        width: 90vw;
+    }
+}

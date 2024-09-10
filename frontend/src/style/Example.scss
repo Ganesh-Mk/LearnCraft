@@ -1,0 +1,34 @@
+.exContainer{
+    margin-top: 3vw;
+    display: flex;    
+    width: 90%;
+    flex-direction: column;
+    gap: .5vw;
+    background: #343434;
+    border-radius: 2vw;
+    padding: 2vw 2vw;
+
+    h2{
+        font-size: 1.4vw;
+        margin-bottom: 1vw;
+    }
+
+    span{
+        font-size: 1.3vw;
+        color: lightgrey;
+    }
+
+    .bold{
+        font-weight: bold;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .exContainer h2 {
+        font-size: 4vw;
+    }
+    .exContainer span {
+        font-size: 4vw;
+    }
+}

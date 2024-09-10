@@ -1,0 +1,66 @@
+* {
+  color: white;
+}
+
+Tab,
+Tablist,
+p,
+Box {
+  color: white;
+}
+
+.outputContainer {
+  height: 23vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.css-1xpribl {
+  background: #242424 !important;
+  border-radius: 1rem !important;
+}
+
+.testCase {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+.testCase .testCaseBlock {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr;
+}
+.testCase .bold {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .outputContainer {
+    height: 100%;
+    margin-bottom: 5vh;
+    padding-bottom: 10vw !important;
+  }
+  .outputBox {
+    margin-top: 5vw;
+  }
+
+  .css-1eyg6bu {
+    padding-top: 5vw !important;
+    padding-bottom: 5vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .testCase {
+    gap: 5vw;
+  }
+
+  .testCase .bold,
+  .testCase span {
+    font-size: 3vw;
+  }
+
+  .css-1g4bnrh {
+    height: 6vh !important;
+  }
+}

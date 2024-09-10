@@ -1,0 +1,126 @@
+$btnColor: #0066ff;
+.registerPageContainer {
+    background: url("../assets/images/register_page.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.password-r {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+        opacity 0.4s,
+        max-height 0.5s;
+}
+
+.password-r.show {
+    opacity: 1;
+    max-height: 200px; /* Adjust according to the content height */
+}
+
+.password-r ul li.fulfilled {
+    text-decoration: line-through;
+    color: rgb(0, 236, 47);
+}
+.signupBox {
+    border: 3px solid rgb(91, 91, 91);
+    padding-top: 2vw;
+    border-radius: 1vw;
+    backdrop-filter: blur(5px);
+    border-radius: 4vw;
+}
+.RegisterContainer {
+    height: 100vh;
+    width: 100vw;
+
+    > .logoContainer {
+        display: flex;
+        justify-content: center;
+
+        > span {
+            font-size: 3vw;
+            margin-top: 3vw;
+        }
+    }
+    > span {
+        display: flex;
+        justify-content: center;
+        margin-top: 2vw;
+    }
+}
+.SignUpPart2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > .google-signIn {
+        width: auto;
+        font-weight: 200;
+        font-size: 1.5vw;
+        color: black;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+        > img {
+            width: 1.8vw;
+        }
+    }
+}
+.code {
+    color: #0066ff;
+}
+h2 {
+    font-size: 2vw;
+    font-weight: 100;
+    color: white;
+}
+.Btn {
+    // border: 2px solid grey;
+    margin-top: 5px;
+    background-color: rgb(29, 125, 227);
+    color: white;
+}
+
+.SignUp-Container {
+    margin-top: 5vw;
+    // border: 2px solid rgb(13, 13, 13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > .SignUpBox {
+        background: url("../assets/images/bacgroundLoginSignup.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 35vw;
+        padding: 1.8vw;
+        display: flex;
+        // border: 2px solid rgb(177, 18, 18);
+        border-radius: 1vw;
+        box-shadow: 1px 4px 12px gray;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        > .inputs form {
+            margin-top: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            > input {
+                width: 22vw;
+                height: 2.5vw;
+                margin-top: 1vw;
+                padding: 0.2vw 0.5vw;
+                font-size: 1vw;
+                font-weight: 500;
+                border-radius: 0.5vw;
+                border: none;
+            }
+        }
+    }
+}
+::placeholder {
+    font-size: 1vw;
+}
