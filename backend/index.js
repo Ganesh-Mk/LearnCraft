@@ -14,8 +14,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 const corsOptions = {
-  // origin: "https://learncraft.vercel.app",
-  origin: "http://localhost:5173",
+  origin: process.env.FRONTEND_URL,
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
