@@ -11,7 +11,6 @@ import { useToast } from "@chakra-ui/react";
 import { images } from "../javascripts/images";
 import { executeCode } from "../javascripts/api";
 import { useSelector, useDispatch } from "react-redux";
-import { backendurl } from "../javascripts/urls";
 import {
   addAllOutput,
   addAllResult,
@@ -47,6 +46,8 @@ function CodingPage() {
   const [jsSolved, setJsSolved] = useState(0);
   const [pythonSolved, setPythonSolved] = useState(0);
   const [javaSolved, setJavaSolved] = useState(0);
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
   const attempts = useSelector((state) => state.attempts.attempts);
 
   // const backend_url = import.meta.env.REACT_APP_BACKEND_URL;
@@ -61,7 +62,7 @@ function CodingPage() {
 
   useEffect(() => {
     axios
-      .get(`${backendurl}/problemRecord`, {
+      .get(`${VITE_BACKEND_URL}/problemRecord`, {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {
@@ -100,7 +101,7 @@ function CodingPage() {
       localStorage.setItem("userAttempts", JSON.stringify(updatedAttempts));
 
       axios
-        .post(`${backendurl}/userAttempts`, {
+        .post(`${VITE_BACKEND_URL}/userAttempts`, {
           userEmail: localStorage.getItem("email"),
           attempts: updatedAttempts || [],
         })
@@ -369,7 +370,7 @@ print(linkedListToArray(result))
       let linkedinVal = localStorage.getItem("linkedin");
 
       await axios
-        .post(`${backendurl}/addProblemRecord`, {
+        .post(`${VITE_BACKEND_URL}/addProblemRecord`, {
           userEmail: emailVal,
           userInsta: instaVal,
           userGithub: githubVal,

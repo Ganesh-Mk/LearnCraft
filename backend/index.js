@@ -349,7 +349,6 @@ app.post("/login", (req, res) => {
 });
 
 app.post("/createUser", (req, res) => {
-  console.log("Came to backend");
   UserModel.findOne({ email: req.body.userEmail })
     .then((existingUser) => {
       if (existingUser) {

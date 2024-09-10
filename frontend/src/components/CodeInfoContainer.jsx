@@ -8,7 +8,6 @@ import Submit from "./Submit";
 import { images } from "../javascripts/images";
 import CorrectIcon from "./CorrectIcon";
 import WrongIcon from "./WrongIcon";
-import { backendurl } from "../javascripts/urls";
 import axios from "axios";
 
 function CodeInfoContainer({ isLoadingSubmit }) {
@@ -16,6 +15,7 @@ function CodeInfoContainer({ isLoadingSubmit }) {
   const [curPage, setCurPage] = useState("sub");
   const [isSolved, setIsSolved] = useState(false);
   const [renderMarker, setRenderMarker] = useState(false);
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {}, []);
 
@@ -34,7 +34,7 @@ function CodeInfoContainer({ isLoadingSubmit }) {
 
   function fetchSolvedProblems() {
     axios
-      .get(`${backendurl}/problemRecord`, {
+      .get(`${VITE_BACKEND_URL}/problemRecord`, {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {

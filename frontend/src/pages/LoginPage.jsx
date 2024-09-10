@@ -9,7 +9,6 @@ import { Button, Stack } from "@chakra-ui/react";
 import { Flip, ToastContainer, toast } from "react-toastify";
 import { images } from "../javascripts/images";
 import "react-toastify/dist/ReactToastify.css";
-import { backendurl } from "../javascripts/urls";
 import { storeUserImage } from "../store/userSlice";
 
 export default function LoginPage() {
@@ -18,6 +17,8 @@ export default function LoginPage() {
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   const handleSubmit = () => {
     if (userEmail == "" || userPassword == "") {
@@ -37,7 +38,7 @@ export default function LoginPage() {
     setIsLoading(true);
 
     axios
-      .post(`${backendurl}/login`, {
+      .post(`${VITE_BACKEND_URL}/login`, {
         userEmail,
         userPassword,
       })

@@ -8,7 +8,6 @@ import { setId, setName, setEmail, setPassword } from "../store/userSlice";
 import { Flip, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { images } from "../javascripts/images";
-import { backendurl } from "../javascripts/urls";
 
 export default function RegisterPage() {
   const dispatch = useDispatch();
@@ -19,6 +18,7 @@ export default function RegisterPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [showPasswordRequirements, setShowPasswordRequirements] =
     useState(false);
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   const validatePassword = (password) => {
     const passwordRegex =
@@ -85,7 +85,7 @@ export default function RegisterPage() {
     localStorage.setItem("rank", "Unranked");
 
     axios
-      .post(`${backendurl}/createUser`, {
+      .post(`${VITE_BACKEND_URL}/createUser`, {
         userName,
         userEmail,
         userPassword,

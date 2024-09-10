@@ -17,7 +17,6 @@ import { setLeaderBoardEntries } from "../store/leaderBoardSlice";
 import { addTestCaseResults } from "../store/problemObjSlice";
 import { setStoreAttempts } from "../store/attemptsSlice";
 import { useNavigate } from "react-router-dom";
-import { backendurl } from "../javascripts/urls";
 
 function AccountPage() {
   const navigate = useNavigate();
@@ -44,7 +43,7 @@ function AccountPage() {
   const [totalHard, setTotalHard] = useState(0);
   const [totalProblems, setTotalProblems] = useState(0);
   const [loader, setLoader] = useState(false);
-  // const backend_url = import.meta.env.REACT_APP_BACKEND_URL;
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   const dispatch = useDispatch();
   const leaderBoardEntries = useSelector(
@@ -54,7 +53,7 @@ function AccountPage() {
   useEffect(() => {
     async function fetchLeaderBoard() {
       await axios
-        .get(`${backendurl}/leaderBoardprint`)
+        .get(`${VITE_BACKEND_URL}/leaderBoardprint`)
         .then((response) => {
           dispatch(setLeaderBoardEntries(response.data));
         })
@@ -125,7 +124,7 @@ function AccountPage() {
     setLoader(true);
 
     axios
-      .get(`${backendurl}/problemRecord`, {
+      .get(`${VITE_BACKEND_URL}/problemRecord`, {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {
@@ -160,7 +159,7 @@ function AccountPage() {
       dispatch(setStoreAttempts(savedAttempts));
     } else {
       axios
-        .get(`${backendurl}/getUserAttempts`, {
+        .get(`${VITE_BACKEND_URL}/getUserAttempts`, {
           params: { userEmail: localStorage.getItem("email") },
         })
         .then((response) => {

@@ -8,7 +8,6 @@ import { AllquesObject } from "../javascripts/data";
 import { addTestCaseResults } from "../store/problemObjSlice";
 import axios from "axios";
 import crtImage from "../assets/icons/correctIcon.png";
-import { backendurl } from "../javascripts/urls";
 import CorrectIcon from "./CorrectIcon";
 
 const ProblemDisplayContainer = ({
@@ -20,6 +19,8 @@ const ProblemDisplayContainer = ({
   isGapSmall,
 }) => {
   const dispatch = useDispatch();
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
   const attemptsStore = useSelector((state) => state.attempts.attempts);
 
   const attempts =

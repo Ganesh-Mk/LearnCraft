@@ -14,7 +14,6 @@ import { addTestCaseResults } from "../store/problemObjSlice";
 import { addProblemObj } from "../store/problemObjSlice";
 
 import { setUserProblems, userSlice } from "../store/userSlice";
-import { backendurl } from "../javascripts/urls";
 import DisplayProblemContainer from "../components/DisplayProblemContainer";
 import {
   Button,
@@ -39,7 +38,7 @@ const HomePage = () => {
 
   const attempts = useSelector((state) => state.attempts.attempts);
 
-  // const backend_url = import.meta.env.REACT_APP_BACKEND_URL;
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   const dispatch = useDispatch();
   const solvedProblems = useSelector(
@@ -56,7 +55,7 @@ const HomePage = () => {
       dispatch(setStoreAttempts(savedAttempts));
     } else {
       axios
-        .get(`${backendurl}/getUserAttempts`, {
+        .get(`${VITE_BACKEND_URL}/getUserAttempts`, {
           params: { userEmail: localStorage.getItem("email") },
         })
         .then((response) => {
@@ -96,7 +95,7 @@ const HomePage = () => {
   useEffect(() => {
     setLoader(true);
     axios
-      .get(`${backendurl}/problemRecord`, {
+      .get(`${VITE_BACKEND_URL}/problemRecord`, {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {
@@ -133,7 +132,7 @@ const HomePage = () => {
 
   useEffect(() => {
     axios
-      .get(`${backendurl}/problemRecord`, {
+      .get(`${VITE_BACKEND_URL}/problemRecord`, {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {

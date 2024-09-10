@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 import "../style/ProblemsPage.scss";
 import ProblemDisplayContainer from "../components/ProblemDisplayContainer";
 import { AllquesObject } from "../javascripts/data";
-import { backendurl } from "../javascripts/urls";
 
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -33,6 +32,7 @@ function ProblemsPage() {
   const [selectedValue, setSelectedValue] = useState("All");
   const [selectedTopic, setSelectedTopic] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   const dispatch = useDispatch();
 
@@ -91,7 +91,7 @@ function ProblemsPage() {
 
   useEffect(() => {
     axios
-      .get(`${backendurl}/problemRecord`, {
+      .get(`${VITE_BACKEND_URL}/problemRecord`, {
         params: { userEmail: localStorage.getItem("email") },
       })
       .then((response) => {

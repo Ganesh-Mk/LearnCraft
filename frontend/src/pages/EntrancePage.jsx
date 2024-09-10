@@ -145,6 +145,7 @@ export default function EntrancePage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   // window.location.reload()
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     // Set html overflow-y to scroll when component mounts (entering Entrance page)

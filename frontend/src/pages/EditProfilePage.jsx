@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { Stack } from "@chakra-ui/react";
-import { backendurl } from "../javascripts/urls";
 import Navbar from "../components/Navbar";
 import { images } from "../javascripts/images";
 import axios from "axios";
@@ -45,6 +44,7 @@ function EditProfilePage() {
   const [userLinkedin, setUserLinkedin] = useState("");
   const [userImage, setUserImage] = useState(images.accDefaultLogo);
   const [isLoading, setIsLoading] = useState(false);
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     setUserName(localStorage.getItem("name"));
@@ -66,15 +66,18 @@ function EditProfilePage() {
     );
   }, []);
 
-
   const validateSocialMediaLinks = () => {
-    const instaRegex = /^https:\/\/(www\.)?instagram.com\/[A-Za-z0-9._%+-]+\/?$/;
+    const instaRegex =
+      /^https:\/\/(www\.)?instagram.com\/[A-Za-z0-9._%+-]+\/?$/;
     const githubRegex = /^https:\/\/(www\.)?github.com\/[A-Za-z0-9._%+-]+\/?$/;
-    const linkedinRegex = /^https:\/\/(www\.)?linkedin.com\/in\/[A-Za-z0-9._%+-]+\/?$/;
+    const linkedinRegex =
+      /^https:\/\/(www\.)?linkedin.com\/in\/[A-Za-z0-9._%+-]+\/?$/;
 
     const isGithubValid = userGithub ? githubRegex.test(userGithub) : true;
     const isInstaValid = userInsta ? instaRegex.test(userInsta) : true;
-    const isLinkedinValid = userLinkedin ? linkedinRegex.test(userLinkedin) : true;
+    const isLinkedinValid = userLinkedin
+      ? linkedinRegex.test(userLinkedin)
+      : true;
 
     return { isGithubValid, isInstaValid, isLinkedinValid };
   };
@@ -84,7 +87,8 @@ function EditProfilePage() {
     storeUserImage(userObj.userImage);
     console.log(userImage.split("/").pop().split(".")[0]);
 
-    const { isGithubValid, isInstaValid, isLinkedinValid } = validateSocialMediaLinks();
+    const { isGithubValid, isInstaValid, isLinkedinValid } =
+      validateSocialMediaLinks();
 
     if (!isGithubValid) {
       toast.error("Github link is not valid", {
@@ -134,7 +138,6 @@ function EditProfilePage() {
       return;
     }
 
-
     const userDetails = {
       userEmail,
       userName,
@@ -146,7 +149,7 @@ function EditProfilePage() {
     };
 
     axios
-      .post(`${backendurl}/updateUserDetails`, userDetails)
+      .post(`${VITE_BACKEND_URL}/updateUserDetails`, userDetails)
       .then((result) => {
         const currentName = localStorage.getItem("name");
         const currentEmail = localStorage.getItem("email");

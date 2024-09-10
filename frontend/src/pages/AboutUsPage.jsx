@@ -32,13 +32,13 @@ import {
 import "../style/AboutUs.scss";
 import Navbar from "../components/Navbar.jsx";
 import { Link } from "react-router-dom";
-import { backendurl } from "../javascripts/urls.js";
 
 export default function AboutUsPage() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [message, setmessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   // const backend_url = import.meta.env.REACT_APP_BACKEND_URL;
 
@@ -52,7 +52,7 @@ export default function AboutUsPage() {
     console.log("Send message: ", name, email, message);
 
     axios
-      .post(`${backendurl}/sendEmail`, {
+      .post(`${VITE_BACKEND_URL}/sendEmail`, {
         name,
         email,
         message,

@@ -5,7 +5,6 @@ import {
   InputLeftElement,
   Input,
 } from "@chakra-ui/react";
-import { backendurl } from "../javascripts/urls";
 import Navbar from "../components/Navbar";
 import LeaderBoardUsers from "../components/LeaderBoardUsers";
 import { useSelector, useDispatch } from "react-redux";
@@ -22,11 +21,14 @@ function LeaderBoardPage() {
     (state) => state.leaderBoard.leaderBoardEntries
   );
   const [rankMap, setRankMap] = useState({});
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     async function fetchLeaderBoard() {
       try {
-        const response = await axios.get(`${backendurl}/leaderBoardprint`);
+        const response = await axios.get(
+          `${VITE_BACKEND_URL}/leaderBoardprint`
+        );
         const updatedEntries = response.data.map((entry) => ({
           ...entry,
           image:
