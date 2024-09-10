@@ -152,7 +152,7 @@ const HomePage = () => {
       .catch((error) => {
         console.error("Error fetching user data:", error);
       });
-  }, [loadSolvedTickMark]);
+  }, []);
 
   useEffect(() => {}, [attempts]);
 

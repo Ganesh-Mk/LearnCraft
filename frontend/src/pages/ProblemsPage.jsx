@@ -110,7 +110,7 @@ function ProblemsPage() {
       .catch((error) => {
         console.error("Error fetching user data:", error);
       });
-  }, [loadSolvedTickMark]);
+  }, []);
 
   return (
     <div style={{ backgroundColor: "#1a1a1a", height: "100vh" }}>
